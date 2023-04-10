@@ -18,7 +18,15 @@ Java+Jsp+Oracle 도서관프로그램
 - ` Apache Tomcat `
 
 ## :scroll: **주요기능**
+### :microphone: Apache+Tomcat (Tomcat이 Apache 기능 일부를 가져와 제공! WAS(Web Application Server)
+- Tomcat : 동적인 web을 만들기 위한 Web Container(servlet Container)
+- Web Server에서 정적으로 처리해야 할 데이터를 제외 (JSP,PHP) 등 Web Container(Tomcat) 전달
+- Apache : Web Server 불리우며 Client request(요청)이 있을때만 응답하는 정적 페이지에 사용.
 
+### :computer: Apache+Tomcat 흐름
+- Client -> Web Server( 동적인페이지라면 Web Container(servlet Container) 전송) 정적페이지라면 Client 전송.
+- Web Container(servlet Container) : JSP,Servlet 구동 환경 제공
+- Web Server는 Web Container(servlet Container)받은 결과값을 Client로 전송(정적인 data 전송)
 
 ```java
 <servlet>
@@ -60,4 +68,3 @@ public BookDTO selectBook1(int bookID) throws SQLException{
 ```
 - 도서,회원의 상세정보에서 정보를 수정하기 전에 bookID,userID 값을 기준으로  DB에 접근하여 정보를 수정해야 하기 때문에 readonly 하여 고정.
 - 정보를 (CRUD) 할 때 입력란에 공백이 없게끔 required 설정
-
